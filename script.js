@@ -43,15 +43,24 @@ function fruits(){
 fruits();
 console.log("Outside Function:",fruit)
 
+/* <------------------------------------------------------------> */
+
 // Task 2: Execise 1: Fix the code to print 15
 
-// var age = 15;
+ var  age = 15;
 
 // for (var age = 1; age <= 10; age++) {
-//     console.log(age);
-// }
+//          console.log(age);
+//  }
 
-// console.log(age); // Should print 15 instead of 10
+// solution
+ for (let age = 1; age <= 10; age++) { 
+    console.log(age);
+}
+
+ console.log(age); // Should print 15 instead of 10
+
+/* <------------------------------------------------------------> */
 
 // Task 2: Execise 2: Fix the code to print Jack Russell Terrier
 
@@ -66,10 +75,21 @@ console.log("Outside Function:",fruit)
 //     console.log(myDog);
 // }
 
-// console.log(myDog); // Jack Russell Terrier
+// Solution
+let myDog = "Jack Russell Terrier";
+let shortLeggies = true;
+
+if (shortLeggies) {
+    let myDog = "Welsh Corgie";
+    console.log(myDog);
+} else {
+    let myDog = "Border Collie";
+    console.log(myDog);
+}
+console.log(myDog); // Jack Russell Terrier
 
 
-
+/* <------------------------------------------------------------> */
 
 
 
