@@ -91,6 +91,7 @@ developer = "Dev Uamir Azmat" // can be redifine
 console.log(developer);
 
 const dev = "dev marii";
+// dev= "Marii Dev"    error : can't be redefine
 console.log(dev);
 
 const stacks = ["Php" , "MERN"]
@@ -115,7 +116,6 @@ DevDetails.Joining="2022";
 console.log(DevDetails);
 
 
-// dev= "Marii Dev"    error : can't be redefine
 
 // TASK 3: Exercise: Refactor the code to use let/const
 
@@ -128,7 +128,19 @@ console.log(DevDetails);
 // painter.birthDate = "March 30, 1853";
 // painter.paintings.push("Something");
 
-// console.log(painter); // Should print { name: 'Van Gogh', nationality: 'Dutch', paintings: [ 'The Starry Night', 'Irises', 'Almond Blossoms' ] }
+// solution
+var painter = {
+    name: "Van Gogh",
+    nationality: "Dutch",
+    paintings: ["The Starry Night", "Irises", "Almond Blossoms"]
+};
+Object.freeze(painter);
+Object.freeze(painter.paintings);
+//painter.birthDate = "March 30, 1853";
+//painter.paintings.push("Something");
+
+ console.log(painter); // Should print { name: 'Van Gogh', nationality: 'Dutch', paintings: [ 'The Starry Night', 'Irises', 'Almond Blossoms' ] }
+
 
 // ---------------------------------------------
 // TASK 4: Destructuring
