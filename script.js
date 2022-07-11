@@ -1,6 +1,6 @@
 // Task 1: Introduction
 
-console.log('Hello, ES6');
+// console.log('Hello, to ES6 Course Folk');
 
 
 
@@ -10,11 +10,38 @@ console.log('Hello, ES6');
 // Task 2: Variables (let) and Scoping
 
 
+var name = 'Umair'
+console.log(name);
+name= "Azmat";
+console.log(name);
+var name = "latif";  //this can be redefine
+console.log(name);
 
 
+let university = "GCUF";
+console.log(university);
+university= "Aggri"
+console.log(university);
+// let university = "NTU"; Errot this can't be redifine
+console.log(university);
 
 
+var car = "BMW"
+function cars(){
+    var car = "Ferrari"
+    console.log("Inside Function:",car);
+}
+cars();
+console.log("Outside Function:", car);
 
+
+let fruit = "Apple";
+function fruits(){
+    let fruit = "Banana"
+    console.log("Inside Function:",fruit);
+}
+fruits();
+console.log("Outside Function:",fruit)
 
 // Task 2: Execise 1: Fix the code to print 15
 
