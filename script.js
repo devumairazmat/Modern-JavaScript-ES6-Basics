@@ -145,6 +145,29 @@ Object.freeze(painter.paintings);
 // ---------------------------------------------
 // TASK 4: Destructuring
 
+const academy = {
+    namee : "Learn with Umair",
+    since : 2002,
+    location :"Lahore",
+    Achievements : [ "1st in 2006" , "2nd i  2010"] ,
+}
+// const namee = academy.namee;
+// const location = academy.location;
+
+const  { namee : academyName, location : academyLocation } = academy;
+console.log(academyName,academyLocation);
+
+function courses({namee, location}) {
+    // console.log(academy.namee);
+    // console.log(academy.location);
+    console.log(namee);
+    console.log(location);
+}
+courses(academy);
+// console.log(academy);
+
+// <------------------------------------------------------------------------>
+
 // Task 4: Exercise: Extract data with destructuring
 
 // const ingredients = {
@@ -168,7 +191,38 @@ Object.freeze(painter.paintings);
 //         "Simmer for 3 min. Serve masala chai hot or warm!");
 // }
 
-// prepareChai(ingredients);
+// solution
+const ingredients = {
+    tea: 'black',
+    milk: 'soy',
+    sweetener: 'honey',
+    spices: ['ginger', 'cardamom', 'cinnamon', 'nutmeg']
+}
+
+// Destructure the parameters
+function prepareChai({tea,spices,milk,sweetener} ) {
+   
+    console.log("Mix the " + tea + " tea " +
+        "with the " + spices + " in a small pot. " +
+        "Add a cup of water and bring to boil. Boil for 2-3 min. " +
+        "Add " + milk + " milk and " + sweetener + ". " +
+        "Simmer for 3 min. Serve masala chai hot or warm!");
+}
+ prepareChai(ingredients);
+
+
+//  Some plus
+
+const subjects = ["Programming","Database","DataStrucure","Algorithms"];
+[first] = subjects;
+[,, third] = subjects;
+[first,second, ...restofSubjects] = subjects;
+console.log(first);
+console.log(third);
+console.log(restofSubjects);
+
+
+
 
 // ---------------------------------------------
 // TASK 5: Strings and Interpolation
