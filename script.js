@@ -277,13 +277,32 @@ console.log(`The capital of ${country} is the city of " ${city} `);
 // ---------------------------------------------
 // TASK 6: Arrow functions
 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let doubleNumber = numbers.map((numbers) => numbers * 2);
+console.log(doubleNumber);
+
 // TASK 6: Exercise: Filter out only the prime numbers from the array
 
 // const primeNumbers = [1, 2, 3, 4, 5, 6].filter(/* add the function to filter out the prime numbers */);
-// console.log(primeNumbers);
+// solution:
+
+const isprime = (numbers) => numbers / 2 === 0;
+const primeNumbers = [1, 2, 3, 4, 5, 6].filter(isprime);
+console.log(primeNumbers);
 
 // ---------------------------------------------
 // TASK 7: Arrow functions and this
+
+function dogg() {
+  this.age = 22;
+
+  setInterval(() => {
+    this.age += 1;
+    console.log(this.age);
+  }, 1000);
+}
+
+// const puppy = dogg();
 
 // Task 7: Exercise
 
@@ -304,5 +323,22 @@ console.log(`The capital of ${country} is the city of " ${city} `);
 //        .join(" ");
 // }
 
-// const translator = new Translator();
-// console.log(translator.getBulgarianPhrase());
+// Solution
+
+function Translator() {
+  this.phrase = "good day";
+  this.englishBulgarianDictionary = {
+      good: "ÃÂ´ÃÂ¾ÃÂ±ÃÂÃÂ",
+      day: "ÃÂ´ÃÂµÃÂ½"
+  }
+}
+
+Translator.prototype.getBulgarianPhrase = function() {
+  return this.phrase
+      .split(" ")
+      .map((word) => this.englishBulgarianDictionary[word])
+      .join(" ");
+}
+
+ const translator = new Translator();
+console.log(translator.getBulgarianPhrase());
